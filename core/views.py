@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from .models import *
 
 def login(request):
-    return render(request, 'login/login.html')
+    login_images = CarouselLoginImage.objects.all()
+    return render(request, 'login/login.html', {'login_images': login_images})
 
 def home(request):
     return render(request, 'dashboard/home.html')

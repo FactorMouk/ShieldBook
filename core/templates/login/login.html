@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <!doctype html>
-<html lang='pt-br'>
+<html lang="pt-br">
     <head>
         <meta name="keywords" content="rpg, master, shield, shieldbook, create">
         <meta name="description" content="A WEB system for creating, editing and sharing virtual master shields">
@@ -17,9 +17,25 @@
                 <span id="login-form">
 
                 </span>
-                <a id='create-account' href=''>
-                    <span id='create-account-button'>CRIAR UMA NOVA CONTA</span>
+                <a id="create-account" href="">
+                    <span id="create-account-button">CRIAR UMA NOVA CONTA</span>
                 </a>
+            </div>
+            <div id="right-session">
+                <div id="carousel-session">
+                    {% if login_images %}
+                        {%for login_image in login_images%}
+                            <span class="carousel-image">
+                                <span> {{login_image.title}} </span>
+                                <span> <img src="/media/{{login_image.image}}"> </span>
+                            </span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div id="social-session">
+                    <img src="{% static 'img/icons/facebook-logo.png'%}">
+                    <img src="{% static 'img/icons/github-logo.png'%}">
+                </div>
             </div>
         </div>
     </body>
