@@ -25,8 +25,9 @@ SECRET_KEY = 'eal_1kvbh1%&jbw@h@_#p1m*kptdg^z+i(2v(0*e^4am(1zh_a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+LOGIN_REDIRECT_URL = 'home'
 
 # Application definition
 

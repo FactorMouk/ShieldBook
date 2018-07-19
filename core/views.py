@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.contrib.auth import authenticate, login
 
+def sign_up(request):
+    template_sign_up = loader.get_template('login/signup.html')
+    return HttpResponse(template_singup.render())
+    
 def login(request):
     template_login = loader.get_template('login/login.html')
     return HttpResponse(template_login.render())
