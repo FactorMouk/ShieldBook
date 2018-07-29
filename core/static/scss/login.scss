@@ -123,9 +123,16 @@ body {
                     #left-arrow {
                         transform: rotate(180deg);
                         left: 30px;
+                        :hover {
+                            cursor: pointer;
+                        }
                     }
                     #right-arrow {
                         right: 30px;
+                        :hover {
+                            cursor: pointer;
+                        }
+                        cursor: pointer;
                     }
                 }
                 #carousel-repo {

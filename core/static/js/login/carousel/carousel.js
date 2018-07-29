@@ -6,7 +6,7 @@ function addingScreenInitial(carouselscreenimages,carouselrepo){
     carouselscreenimages.insertBefore(carouselrepo.children[0], carouselscreenimages.firstChild);
     carouselscreenimages.insertBefore(carouselrepo.children[carouselrepo.children.length - 1], carouselscreenimages.firstChild);
 }
-function stylenone(carouselscreenimages,number){
+function styleNone(carouselscreenimages,number){
     var element = carouselscreenimages.children[number];
     element.children[1].children[0].style.height = null; 
     element.children[1].children[0].style.width = null;
@@ -56,16 +56,24 @@ stylization(carouselscreenimages);
 $(document).ready(function(){
     /*Left-button*/
     $("#left-arrow").click(function(){
-        stylenone(carouselscreenimages,0);
+        /*No style the previous image*/
+        styleNone(carouselscreenimages,0);
+        /*Add the previous image in the carouselrepo end (qeue)*/
         carouselrepo.append(carouselscreenimages.children[0]);
+        /*Add in carouselscreen (posterior) the next qeue image*/
         carouselscreenimages.append(carouselrepo.children[0]);
+        /*Styling the carousel screen*/
         stylization(carouselscreenimages);
     });
     /*Right-button*/
     $("#right-arrow").click(function(){
-        stylenone(carouselscreenimages,2);
+        /*No style the posterior image*/
+        styleNone(carouselscreenimages,2);
+        /*Add the posterior image in the carouselrepo start (qeue)*/
         carouselrepo.prepend(carouselscreenimages.children[2]);
+        /*Add in carouselscreen (previous) the last qeue image*/
         carouselscreenimages.prepend(carouselrepo.children[carouselrepo.children.length-1]);
+        /*Styling the carousel screen*/
         stylization(carouselscreenimages);
     });
 });

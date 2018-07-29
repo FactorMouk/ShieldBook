@@ -102,8 +102,13 @@ body {
           body #background #right-session #carousel-session #carousel-screen #left-arrow {
             transform: rotate(180deg);
             left: 30px; }
+            body #background #right-session #carousel-session #carousel-screen #left-arrow :hover {
+              cursor: pointer; }
           body #background #right-session #carousel-session #carousel-screen #right-arrow {
-            right: 30px; }
+            right: 30px;
+            cursor: pointer; }
+            body #background #right-session #carousel-session #carousel-screen #right-arrow :hover {
+              cursor: pointer; }
         body #background #right-session #carousel-session #carousel-repo .carousel-field {
           display: none; }
       body #background #right-session #social-session {
