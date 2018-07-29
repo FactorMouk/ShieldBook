@@ -52,6 +52,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       min-height: 600px;
       width: 900px;
       margin-right: 20px; }
@@ -73,20 +74,36 @@ body {
           justify-content: center;
           height: auto;
           width: 100%; }
-          body #background #right-session #carousel-session #carousel-screen .carousel-field {
+          body #background #right-session #carousel-session #carousel-screen #carousel-screen-images {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            height: auto;
             width: 100%; }
-            body #background #right-session #carousel-session #carousel-screen .carousel-field .carousel-title {
-              display: none; }
-            body #background #right-session #carousel-session #carousel-screen .carousel-field .carousel-image {
+            body #background #right-session #carousel-session #carousel-screen #carousel-screen-images .carousel-field {
               display: flex;
-              justify-content: center;
-              width: 100%;
-              margin-top: 10px; }
-              body #background #right-session #carousel-session #carousel-screen .carousel-field .carousel-image img {
-                box-shadow: 2px 2px 3px 0px #111111; }
+              flex-direction: column;
+              align-items: center;
+              width: 100%; }
+              body #background #right-session #carousel-session #carousel-screen #carousel-screen-images .carousel-field .carousel-title {
+                display: none; }
+              body #background #right-session #carousel-session #carousel-screen #carousel-screen-images .carousel-field .carousel-image {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-top: 10px; }
+                body #background #right-session #carousel-session #carousel-screen #carousel-screen-images .carousel-field .carousel-image img {
+                  box-shadow: 2px 2px 3px 0px #111111; }
+          body #background #right-session #carousel-session #carousel-screen .carousel-screen-arrows {
+            display: flex;
+            height: 20px;
+            width: 20px;
+            position: relative; }
+          body #background #right-session #carousel-session #carousel-screen #left-arrow {
+            transform: rotate(180deg);
+            left: 30px; }
+          body #background #right-session #carousel-session #carousel-screen #right-arrow {
+            right: 30px; }
         body #background #right-session #carousel-session #carousel-repo .carousel-field {
           display: none; }
       body #background #right-session #social-session {

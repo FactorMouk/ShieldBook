@@ -24,7 +24,11 @@
             <div id="right-session">
                 <div id="current-title"></div>
                 <div id="carousel-session">
-                    <div id="carousel-screen"></div>
+                    <div id="carousel-screen">
+                        <div class="carousel-screen-arrows" id="left-arrow" onclick="left()"><img src="{% static 'img/icons/play-buttonWHITE.png' %}"></div>
+                        <div id="carousel-screen-images"></div>
+                        <div class="carousel-screen-arrows" id="right-arrow"><img src="{% static 'img/icons/play-buttonWHITE.png' %}"></div>
+                    </div>
                     <div id="carousel-repo">
                         {% if login_images %}
                             {% for login_image in login_images %}
@@ -42,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <script src="{% static 'js/utils/jquery-min.js' %}"></script>
-        <script src="{% static 'js/login/carousel/carousel.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/utils/jquery-min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/login/carousel/carousel.js' %}"></script>
     </body>
 </html>
